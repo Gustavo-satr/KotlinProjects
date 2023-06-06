@@ -60,3 +60,34 @@ println("Mapa de numeros: $num);
     println("Mapa ordenado: $sortedNums");
     
 
+// Función Diccionario ingles 
+
+fun crearDiccionario(): MutableMap<String, String> {
+    val diccionario = mutableMapOf<String, String>()
+    
+    diccionario["mochila"] = "backpack"
+    diccionario["calle"] = "street"
+    diccionario["casa"] = "house"
+    diccionario["queso"] = "cheese"
+    diccionario["Lapiz"] = "Pencil"
+    diccionario["libro"] = "book"
+    diccionario["libreta"] = "notebook"
+    return diccionario
+}
+
+fun consultarTraduccion(diccionario: MutableMap<String, String>, palabra: String): String? {
+    return diccionario[palabra]
+}
+fun main() {
+    val diccionario = crearDiccionario()
+
+    // Consulta de la traducción de la palabra
+    val palabra = "casa"
+    val traduccion = consultarTraduccion(diccionario, palabra)
+    if (traduccion != null) {
+        println("La traducción de '$palabra' es '$traduccion'.")
+    } else {
+        println("La palabra '$palabra' no se encontró en el diccionario.")
+    }
+}
+
