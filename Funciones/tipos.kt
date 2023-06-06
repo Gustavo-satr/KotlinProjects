@@ -29,11 +29,21 @@ fun main(){
     val max = {num1: Int, num2: Int, num3: Int->}
     println("Valor Mximo: ");
 
-//Funcion anonima que calcule el promedio de tres numreosa 
-    val promedio = {num1: Int, nu}
-    println("Promedio: ");
+//Funcion asincrona de promedio
+        val promedio = {n1 : Int, n2 : Int, n3 : Int, n4 : Int, n5 : Int -> (n1+n2+n3+n4+n5)/5};
+        println("promedio = ${promedio(10,9,8,10,8)}");
+    
+//Funcion asincrona del mayor de tres numeros
+        val max = {a: Int, b:Int, c:Int -> 
+            if(a>b && a>c)a
+            else if(b>a && b > c)b
+            else if(c> a && c > b)c
+            else "son iguales"
+        }
+            println("valor maximo:${max(5,8,9)}");
+    
+    }
 
-}
 
 fun borde(caracter : String, veces : Int){
     for( i in 1..veces){
